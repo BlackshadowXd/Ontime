@@ -1,0 +1,112 @@
+body{
+  background-color: #36352E;
+}
+
+.section_form{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.contaner {
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    border: 5px solid rgba(255, 196, 0, 0.815);
+    padding: 20px 120px 20px 120px ;
+    border-radius: 10px;
+    box-shadow: 15px 15px 15px rgba(255, 255, 255, 0.192);
+}
+
+.feed-form {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    align-items: center;
+  }
+  
+  .feed-form input {
+
+    height: 54px;
+    width: 120px;
+    border-radius: 5px;
+    background: white;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    padding: 0 10px;
+    font-weight: 300;
+    font-size: 14px;
+    color: #4B4B4B;
+  }
+  
+  .button_submit:hover, .feed-form input:hover {
+    transform: scale(1.009);
+    box-shadow: 0px 0px 3px 0px #212529;
+  }
+  
+  .button_submit {
+    align-items: center;
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+    color: white;
+    background: rgb(235, 169, 47);
+    border-radius: 5px;
+    border: none;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  #loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #36352E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out;
+}
+
+.loading-spinner {
+    width: 150px;
+    height: 150px;
+    border: 5px solid #E8B34B;
+    border-top: 5px solid #E0BE41;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.loading-spinner::after {
+    content: "ONTIME";
+    position: absolute;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #E8B34B;
+    text-align: center;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Main content styles */
+.main-content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+/* //como hacer un aro de rgb alrededor de la caja del formulario.?
